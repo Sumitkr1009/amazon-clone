@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon clone</title>
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+   <nav>
+    <a href="/">
+        <img src="./assets/amazon_logo.png" width="100" alt="">
+    </a>
+    <div class="nav-country">
+        <img src="./assets/location_icon.png" height="20" alt="">
+        <div>
+            <p>Deliver to</p>
+            <h1>India</h1>
+        </div>
+    </div>
+    <div class="nav-search">
+        <div class="nav-search-gategory">
+            <p>All</p>
+            <img src="./assets/dropdown_icon.png" alt="">
+        </div>
+        <input type="text" class="nav-search-input" placeholder="Search Amazon">
+        <img src="./assets/search_icon.png" class="nav-search-icon" alt="">
+    </div>
+    <div class="nav-language">
+        <div class="language border-box dropdownbtn">
+            <img src="./assets/india_flag.jpg" width="25px" alt="">
+            <div class="show-text">EN</div>
+            <i class="fa-solid fa-caret-down down" style="visibility: visible; color: #a7acba; width: 4px;"></i>
+            <!-- //pop up box while hovering the mouse on the language box  -->
+            <div class="language-select-box active dropdownbox">
+                <div class="top-lag">
+                    <div class="trian">
+                        <i class="fa-solid fa-triangle"></i>
+                    </div>
+                    <div class="circle">
+                        <div class="cir"></div>
+                    </div>
+                    <span class="language-sel">English-EN</span>
+                </div>
+                <div class="middle-lag">
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">हिन्दी-HI</span>
+                    </div>
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">தமிழ்-TA</span>
+                    </div>
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">తెలుగు - TE</span>
+                    </div>
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">ಕನ್ನಡ-KA</span>
+                    </div>
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">മലയാളം-ML</span>
+                    </div>
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">বাংলা-BN</span>
+                    </div>
+                    <div class="m-l-b">
+                        <div class="circle"></div>
+                        <span class="language-sel">मराठी-MR</span>
+                    </div>
+                    <div class="m-l-b">
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                <div class="bottom-lag">
+                    <span class="language-sel"><img src="./assets/india_flag.jpg" width="15px" alt="">You are shopping on Amazon.in
+                        <div class="r">change country / region</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-text">
+        
+        <div class="sign-in border-box dropdownbtn">
+            <div class="sign-text">
+                <a href="./signin.html">
+                <h5>hello, sign in</h5>
+                <h4>Account & Lists<i class="fa-solid fa-caret-down down" style="visibility: visible; color: #a7acba; width: 4px;"></i></h4>
+                </a>
+            </div>
+            
+            <!-- //popup box while hovering the mouse on sign in box   -->
+            <div class="sign-select-box active dropdownbox">
+                <div class="top-part-sel">
+                    <div class="trian2"></div>
+                    <div class="t-p-s-box">
+                        <a href="/signin.html"><button>sign in</button></a>
+                        <p>New Customer? <a href="#">start here</a></p>
+                    </div>
+                </div>
+                <div class="l-r-box-wrap">
+                    <div class="left-part-sel">
+                        <div class="l-p-s-box">
+                            <h3>your Lists</h3>
+                            <ul>
+                                <li>create a wish list</li>
+                                <li>wish from any website</li>
+                                <li>baby wishlist</li>
+                                <li>discover your style</li>
+                                <li>explore showroom</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-part-sel">
+                        <div class="r-p-s-box">
+                            <h3>your account</h3>
+                            <ul>
+                                <li>your account</li>
+                                <li>your orders</li>
+                                <li>your wish list</li>
+                                <li>your recommendation</li>
+                                <li>your prime membership</li>
+                                <li>your prime video</li>
+                                <li>your subscribe & save items</li>
+                                <li>memberships & subscriptions</li>
+                                <li>your free amazon business account</li>
+                                <li>your seller account</li>
+                                <li>manage your content and devices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-text">
+        <p>Return</p>
+        <h1>& Orders</h1>
+    </div>
+    <a href="/signin.html" class="mobile-user-icon" style="display: none;">
+        <img src="./assets/user.png" alt="">
+    </a>
+    <a href="/cart.html" class="nav-cart">
+        <img src="./assets/cart_icon.png" width="35px" alt="">
+        <h4>Cart</h4>
+    </a>
+   </nav> 
+<div class="nav-bottom">
+    <div>
+        <img src="./assets/menu_icon.png" width="25px" alt="">
+        <p>All</p>
+    </div>
+    <p>Today's Deals</p>
+    <p>Customer Service</p>
+    <p>Registry</p>
+    <p>Gift Cards</p>
+    <p>Sell</p>
+</div>
+<div class="header-slider">
+    <a href="#" class="control_prev">&#129144</a>
+    <a href="#" class="control_next">&#129146</a>
+    <ul>
+        <img src="./assets/header1.jpg" class="header-img" alt="">
+        <img src="./assets/header2.jpg" class="header-img" alt="">
+        <img src="./assets/header3.jpg" class="header-img" alt="">
+        <img src="./assets/header4.jpg" class="header-img" alt="">
+        <img src="./assets/header5.jpg" class="header-img" alt="">
+        <img src="./assets/header6.jpg" class="header-img" alt="">
+        <img src="./assets/header7.jpg" class="header-img" alt="">
+    </ul>
+</div>
+
+<div class="box-row header-box">
+    <div class="box-col">
+        <h3>Free imternational returns</h3>
+        <img src="./assets/box1-1.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Lunar New Year</h3>
+        <img src="./assets/box1-2.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Toy Under 199</h3>
+        <img src="./assets/box1-3.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Deals in Laptops</h3>
+        <img src="./assets/box1-4.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+</div>
+<div class="box-row">
+    <div class="box-col">
+        <h3>Grooming Products</h3>
+        <img src="./assets/box2-1.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Latest Devices</h3>
+        <img src="./assets/box2-2.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Pets Food</h3>
+        <img src="./assets/box2-3.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Fashion mart</h3>
+        <img src="./assets/box2-4.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+</div>
+
+<div class="products-slider">
+    <h2>Best sellers in Sports and Outdoors</h2>
+    <div class="products">
+        <a href="/product.html">
+        <img src="./assets/product_img.jpg" alt="">
+        </a>
+        <img src="./assets/product1-1.jpg" alt="">
+        <img src="./assets/product1-2.jpg" alt="">
+        <img src="./assets/product1-3.jpg" alt="">
+        <img src="./assets/product1-4.jpg" alt="">
+        <img src="./assets/product1-5.jpg" alt="">
+        <img src="./assets/product1-6.jpg" alt="">
+        <img src="./assets/product1-7.jpg" alt="">
+        <img src="./assets/product1-8.jpg" alt="">
+        <img src="./assets/product1-9.jpg" alt="">
+        <img src="./assets/product1-10.jpg" alt="">
+    </div>
+</div>
+
+<div class="box-row">
+    <div class="box-col">
+        <h3>Stationary</h3>
+        <img src="./assets/box3-1.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Laptops for study</h3>
+        <img src="./assets/box3-2.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Office chairs</h3>
+        <img src="./assets/box3-3.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Gaming Monitor</h3>
+        <img src="./assets/box3-4.jpg" alt="">
+        <a href="/">Shop More</a>
+    </div>
+</div>
+
+
+<div class="products-slider-with-price">
+    <h2>Deals under 199</h2>
+    <div class="products">
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-1.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-2.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-3.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-4.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-5.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-6.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-7.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-8.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-9.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-10.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-11.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="./assets/product2-12.jpg" alt="">
+            </div>
+            <div class="product-offer">
+                <p>27% off</p> <span>Deal</span>
+            </div>
+            <p class="product-price">Rs. <span>54</span> List Price:Rs.145</p>
+            <h4>This product is the best for ypu</h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="products-slider">
+    <h2></h2>
+    <div class="products">
+        <img src="./assets/product3-1.jpg" alt="">
+        <img src="./assets/product1-2.jpg" alt="">
+        <img src="./assets/product1-3.jpg" alt="">
+        <img src="./assets/product1-4.jpg" alt="">
+        <img src="./assets/product1-5.jpg" alt="">
+        <img src="./assets/product1-6.jpg" alt="">
+        <img src="./assets/product1-7.jpg" alt="">
+        <img src="./assets/product1-8.jpg" alt="">
+        <img src="./assets/product1-9.jpg" alt="">
+        <img src="./assets/product1-10.jpg" alt="">
+    </div>
+
+    <div class="box-row">
+        <div class="box-col">
+            <h3>Stationary</h3>
+            <img src="./assets/box2-1.jpg" alt="">
+            <a href="/">Shop More</a>
+        </div>
+        <div class="box-col">
+            <h3>Laptops for study</h3>
+            <img src="./assets/box2-2.jpg" alt="">
+            <a href="/">Shop More</a>
+        </div>
+        <div class="box-col">
+            <h3>Office chairs</h3>
+            <img src="./assets/box2-3.jpg" alt="">
+            <a href="/">Shop More</a>
+        </div>
+        <div class="box-col">
+            <h3>Gaming Monitor</h3>
+            <img src="./assets/box2-4.jpg" alt="">
+            <a href="/">Shop More</a>
+        </div>
+    </div>
+</div>
+<div class="signin-section">
+    <div class="content">
+        <p>See personalized recommendation</p>
+        <a href="/signin.html"><button>Sign in</button></a>
+        <p>New customer? <a href="">Start here</a></p>
+    </div>
+</div>
+<footer>
+    <div class="foot-panel1">
+            <a href="">Back to Top</a>
+    </div>
+    <div class="foot-panel2">
+        <ul>
+            <p>Get to Know Us</p>
+            <a>About Us</a>
+            <a>Careers</a>
+            <a>Press Releases</a>
+            <a>Amazon Science</a>
+        </ul>
+        <ul>
+            <p>Connect with Us</p>
+            <a>Facebook</a>
+            <a>Twitter</a> 
+            <a>Instagram</a>
+        </ul>    
+        <ul>
+            <p>Make Money with us</p>
+            <a> Sell on Amazon
+            <a>Sell under Amazon Accelerator</a>
+            <a>Protect and Build Your Brand</a>
+            <a>Amazon Global Selling</a>
+            <a>Become an Affiliate</a>
+            <a>Fulfilment by Amazon</a>
+            <a>Advertise Your Products</a>
+            <a>Amazon Pay on Merchants</a>
+        </ul>
+        <ul>
+            <p>Let Us Help You</p>
+            <a>COVID-19 and Amazon</a>
+            <a>Your Account</a>
+            <a>Return Centre</a>
+            <a>100% Purchase Protection</a>
+            <a>Amazon App Download</a>
+            <a>Help</a>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="bottom-footer">
+        <div class="footer-icon">
+            <img src="./assets/amazon_logo.png" alt="">
+            <i class="fa-solid fa-globe"></i>
+            <button>English</button>
+            <i class="fa-solid fa-caret-up"></i>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <div class="country">
+            <ul>
+                <li>Australia</li>
+                <li>brazil</li>
+                <li>Canada</li>
+                <li>France</li>
+                <li>China</li>
+                <li>Germany</li>
+                <li>Italy</li>
+                <li>Japan</li>
+                <li>Mexico</li>
+                <li>Netherland</li>
+                <li>Australia</li>
+                <li>Australia</li>
+                <li>Australia</li>
+                <li>Australia</li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot-panel4">
+        <ul>
+            <p>AbeBooks</p>
+            <a>Books, art</a>
+            <a>& collectibles</a>
+        </ul>
+        <ul>
+            <p>Amazon Web Services</p>
+            <a>Scalable Cloud</a>
+            <a>Computing Services</a>
+        </ul>
+        <ul>
+            <p>Audible</p>
+            <a>Download</a>
+            <a>Audio Books</a>
+        </ul>
+        <ul>
+            <p>IMDb</p>
+            <a>Movies, TV
+            <a>& Celebrities</a>
+        </ul>
+    </div>
+    <div class="foot-panel5">
+        <ul>
+            <p>AbeBooks</p>
+            <a>Books, art</a>
+            <a>& collectibles</a>
+        </ul>
+        <ul>
+            <p>Amazon Web Services</p>
+            <a>Scalable Cloud</a>
+            <a>Computing Services</a>
+        </ul>
+        <ul>
+            <p>Audible</p>
+            <a>Download</a>
+            <a>Audio Books</a>
+        </ul>
+        <ul>
+            <p>IMDb</p>
+            <a>Movies, TV
+            <a>& Celebrities</a>
+        </ul>
+    </div>
+    
+    <div class="pages">
+        <ul>
+        <li>Condition of Use & sales</li>
+        <li>Privacy Notice</li>
+        <li>Your ads Privacy Choices</li>
+        </ul>
+    </div>
+    <div class="Copyright">
+        © 1996-2024, Amazon.com, Inc. or its affiliates
+    </div>  
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
